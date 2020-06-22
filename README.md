@@ -1,0 +1,2 @@
+# Tamagotchi
+Project 0
