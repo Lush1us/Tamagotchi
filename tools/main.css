@@ -1,0 +1,42 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#studio {
+    background: lightgray;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#canvas {
+    display: flex;
+    width: 420px;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.pixel {
+    width: 20px;
+    height: 20px;
+    margin: 0.5px;
+}
+#menu {
+    background: darkslategray;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
