@@ -10,9 +10,141 @@ body {
 #game {
     background-color: deepskyblue;
     height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #actions {
     background-color: forestgreen;
     height: 10vh;
 }
+
+.canvas {
+    width: 355px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pixel {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    margin: .5px;
+}
+
+#start {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 100%;
+    font-size: 30px;
+}
+/* .pixel:nth-child(86) {
+    background: black;
+}
+.pixel:nth-child(87) {
+    background: black;
+}
+.pixel:nth-child(88) {
+    background: black;
+}
+.pixel:nth-child(89) {
+    background: black;
+}
+.pixel:nth-child(90) {
+    background: black;
+}
+.pixel:nth-child(101) {
+    background: black;
+}
+.pixel:nth-child(107) {
+    background: black;
+}
+.pixel:nth-child(116) {
+    background: black;
+}
+.pixel:nth-child(119) {
+    background: black;
+}
+.pixel:nth-child(121) {
+    background: black;
+}
+.pixel:nth-child(124) {
+    background: black;
+}
+.pixel:nth-child(132) {
+    background: black;
+}
+.pixel:nth-child(135) {
+    background: black;
+}
+.pixel:nth-child(137) {
+    background: black;
+}
+.pixel:nth-child(140) {
+    background: black;
+}
+.pixel:nth-child(148) {
+    background: black;
+}
+.pixel:nth-child(150) {
+    background: black;
+}
+.pixel:nth-child(154) {
+    background: black;
+}
+.pixel:nth-child(156) {
+    background: black;
+}
+.pixel:nth-child(164) {
+    background: black;
+}
+.pixel:nth-child(167) {
+    background: black;
+}
+.pixel:nth-child(168) {
+    background: black;
+}
+.pixel:nth-child(169) {
+    background: black;
+}
+.pixel:nth-child(172) {
+    background: black;
+}
+.pixel:nth-child(181) {
+    background: black;
+}
+.pixel:nth-child(187) {
+    background: black;
+}
+.pixel:nth-child(188) {
+    background: black;
+}
+.pixel:nth-child(190) {
+    background: black;
+}
+.pixel:nth-child(198) {
+    background: black;
+}
+.pixel:nth-child(199) {
+    background: black;
+}
+.pixel:nth-child(200) {
+    background: black;
+}
+.pixel:nth-child(201) {
+    background: black;
+}
+.pixel:nth-child(202) {
+    background: black;
+}
+.pixel:nth-child(205) {
+    background: black;
+}
+.pixel:nth-child(207) {
+    background: black;
+} */
