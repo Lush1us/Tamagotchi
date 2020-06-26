@@ -7,4 +7,4 @@ Your job will be to take care of the small creature until it is mature and stron
 
 ---
 
-The 
+Your task while sensitive will be aided by the wonders of nanotechnology. The tamagotchi's body is flooded with nanobots that monitor all the vital aspects. They will display on the left hand side under the familiar health bar forms. Watch those closely!
