@@ -8,3 +8,5 @@ Your job will be to take care of the small creature until it is mature and stron
 ---
 
 Your task while sensitive will be aided by the wonders of nanotechnology. The tamagotchi's body is flooded with nanobots that monitor all the vital aspects. They will display on the left hand side under the familiar health bar forms. Watch those closely!
+
+Also some bots were tasked with keeping track of it's evolution so we will know exactly when the creature is ready to be collected. We used those bots to display on the right hand side a timer that will tell you how long has passed and how old the tamagotchi is. 
