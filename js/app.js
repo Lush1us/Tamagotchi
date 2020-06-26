@@ -46,7 +46,7 @@ document.getElementById('play').addEventListener('click', function () {
 
 const embryo = [107, 108, 109, 110, 111, 112, 126, 133, 145, 148, 151, 154, 165, 168, 171, 174, 185, 194, 205, 207, 212, 214, 225, 228, 229, 230, 231, 234, 246, 253, 255, 257, 267, 268, 269, 270, 271, 272, 276, 278]
 const level2 = [88,89,90,91,92,93,107,114,126,135,146,149,152,155,166,169,172,175,186,195,206,208,213,215,226,229,230,231,232,235,246,255,267,274,287,294,307,310,311,314,326,330,331,335,346,347,348,349,352,353,354,355]
-const level3 = []
+const level3 = [48,49,50,51,52,53,66,67,74,75,85,87,88,93,94,96,104,109,112,117,124,137,143,147,148,149,152,153,154,158,163,178,183,184,197,198,205,208,209,210,211,212,213,216,226,235,246,255,266,275,286,290,291,295,306,310,311,315,324,325,330,331,336,337,343,349,352,358,363,364,365,366,367,368,369,372,373,374,375,376,377,378]
 let age = 1;
 
 //------FUNCTIONS
@@ -75,7 +75,7 @@ function first() {
                 alert('Thank you for your service, agent. This Tamagotchi will be a great asset!')
             }
         gameTimer++
-        if (gameTimer % 20 === 0) {
+        if (gameTimer % 3 === 0) {
             age++
             document.getElementById('gametime').innerText = `Game time: ${gameTimer} Age: ${age}`
             if (age === 2) {
@@ -84,6 +84,13 @@ function first() {
                 }
                 for (let i = 0; i < level2.length; i++) {
                     document.getElementById(`${level2[i]}`).setAttribute('style', 'background-color: black')
+                }
+            } else if (age === 3) {
+                for (let i = 0; i < level2.length; i++) {
+                    document.getElementById(`${level2[i]}`).setAttribute('style', 'background-color: transparent')
+                }
+                for (let i = 0; i < level3.length; i++) {
+                    document.getElementById(`${level3[i]}`).setAttribute('style', 'background-color: black')
                 }
             }
         } else {
