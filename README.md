@@ -16,3 +16,6 @@ In order to better manage the Tamagotchi we created a device to aid you. We know
 ---
 
 Now good luck, Agent!
+
+---
+

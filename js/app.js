@@ -1,4 +1,3 @@
-console.log("I'm the captain now!")
 
 //------TIMERS
 
@@ -45,6 +44,7 @@ let age = 1;
 
 //------FUNCTIONS
 
+// Initial function that loads the pixel canvas 
 function init() {
         for (let i = 1; i <= 400; i++) {
         const pixel = document.createElement('div')
@@ -56,12 +56,18 @@ function init() {
     }
 }
 init();
+
+// The first function that is activated when hitting start.
 function first() {
+    // Saves the name from the input
     document.getElementById('name').innerHTML = document.getElementById('naming').value
+    // Removes the intro screen
     document.getElementById('intro').remove();
+    // The loop that creates the design
     for (let i = 0; i < embryo.length; i++) {
         document.getElementById(`${embryo[i]}`).setAttribute('style', 'background-color: black')
     }
+    // This sets the game timer
     setInterval(gameTime, 1000)
         function gameTime() {
             if (gameTimer === 60 || hungerTimer === 0 || sleepinessTimer === 0 || boredomTimer === 0) {
@@ -69,6 +75,7 @@ function first() {
                 clearInterval(gameTime(), 1000)
             }
         gameTimer++
+        //these handle the design changes based on age
         if (gameTimer % 20 === 0) {
             age++
             document.getElementById('gametime').innerText = `Game time: ${gameTimer} Age: ${age}`
@@ -92,12 +99,14 @@ function first() {
             document.getElementById('gametime').innerText = `Game time: ${gameTimer} Age: ${age}`
         }
     }
+    //calling on all functions :)
     hunger();
     sleepiness();
     boredom();
 }
+// these three functions handle everything related to the stats
 function hunger() {
-    
+    //this creates the status bars
     const hungerBar = document.createElement('div')
     hungerBar.setAttribute('class', 'statusBar')
     hungerBar.setAttribute('id', 'Hunger')
@@ -108,7 +117,7 @@ function hunger() {
         barPixel.setAttribute('id', `hun${i}`)
         hungerBar.appendChild(barPixel)
     }
-
+    // This handles the bar timers and animation
     const hunTime = setInterval(timer, frequency)
     function timer() {
         if (sleepinessTimer === 0 || boredomTimer === 0 || gameTimer === 60) {
