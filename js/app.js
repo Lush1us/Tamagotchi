@@ -6,7 +6,7 @@ let hungerTimer = 100;
 let sleepinessTimer = 100;
 let boredomTimer = 100;
 let gameTimer = 0;
-let frequency = 200;
+let frequency = 100;
 
 //------EVENTS
 
