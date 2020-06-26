@@ -8,28 +8,39 @@
     <title>Document</title>
 </head>
 <body>
-    <button id = "feed">feed</button>
+
     
     
     <div id="game">
+        <div id="intro">
+            <h1>Welcome to your Tamagotchi</h1>
+            <p>Your adoption papers are finalized and you are granted guardian status for this innocent Tamagotchi! Take good care of it or else...</p>
+            <p>Now that the formalities are out of the way it is time to choose a name for this... thing. Once you have decided upon a suitable name go ahead and hit start and good luck!</p>
+            <!-- <textarea id="naming"></textarea> -->
+            <input id='naming' type="text">
+    
+            <button id='start'>START</button>
+        </div>
         
-        <button id='start'>START</button>
+        <h1 id='name'></h1>
+
         <div id="status">
-            <div id="Hunger"></div>
-            <div id="Sleepiness"></div>
-            <div id="Boredom"></div>
+            <!-- <div id="Hunger" class="statusBar"></div> -->
+            <!-- <div id="Sleepiness" class="statusBar"></div> -->
+            <!-- <div id="Boredom" class="statusBar"></div> -->
         </div>
         
         <div class="canvas">
             
+        </div> 
+        
+        <div id='action'>
+            <button id = "feed" class="actButton">feed</button>
+            <button id = "sleep" class="actButton">sleep</button>
+            <button id = "play" class="actButton">play</button>
         </div>
     </div>
-    
-    <div id="actions">
         
-    </div>
-        
-    
     
 </body>
 </html>

@@ -2,43 +2,101 @@ body {
     margin: 0;
 }
 
-#start {
+/* INTRO SCREEN */
+
+#intro {
+    width: 100vw;
+    height: 100vh;
+    background-color: deepskyblue;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
     position: absolute;
-    width: 150px;
-    height: 150px;
+}
+
+#intro p {
+    max-width: 50vw;
+}
+
+#start {
+    position: relative;
     background-color: red;
-    border-radius: 100%;
     font-size: 30px;
     z-index: 2;
 }
 
+/* GENERAL */
+
 #game {
     background-color: deepskyblue;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-grow: 1;
+    position: relative;
 }
+
+#name {
+    position: absolute;
+    top: 0px;
+    height: 40px;
+    width: 100;
+    /* background-color: dimgray; */
+}
+
+/* STATUS BARS */
 
 #status {
     background-color: transparent;
     position: relative;
-    left: -225px;   
+    left: -245px;   
     display: flex;
     flex-wrap: wrap;
     height: 200px;
-    width: 45px;
+    width: 70px;
 }
 
-#actions {
-    background-color: forestgreen;
-    height: 10vh;
+.statusBar {
+    margin-right: 1px;
+    height: 200px;
+    width: 20px;
+    border: solid black;
+    border-radius: 100px;
+    border-width: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
+
+.barPixel {
+    width: 20px;
+    height: 2px;
+    background-color: transparent;
+}
+
+/* ACTION BUTTONS */
+
+#action {
+    display: inline-block;
+    position: absolute;
+    bottom: 35px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.actButton {
+    width: 100px;
+    height: 50px;
+    z-index: 1;
+}
+
+/*  */
 
 .canvas {
-    background-color: lightgreen;
+    background-color: white;
     width: 420px;
     display: flex;
     position: absolute;
@@ -52,27 +110,4 @@ body {
     width: 20px;
     height: 20px;
     margin: .5px;
-}
-
-#Hunger {
-    height: 200px;
-    width: 20px;
-    border: solid black;
-    border-radius: 100px;
-    border-width: 1px;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    /* justify-content: baseline; */
-}
-
-.barPixel {
-    width: 20px;
-    height: 2px;
-    background-color: transparent;
-}
-#feed {
-    width: 20;
-    height: 20;
-    left: -500px;
 }
