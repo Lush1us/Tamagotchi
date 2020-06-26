@@ -1,11 +1,5 @@
 console.log("I'm the captain now!")
 
-class Tamagotchi {
-    constructor(name, age) {
-        this.name = name,
-        this.age = age
-    }
-}
 //------TIMERS
 
 let hungerTimer = 100;
@@ -71,11 +65,11 @@ function first() {
     setInterval(gameTime, 1000)
         function gameTime() {
             if (gameTimer === 60 || hungerTimer === 0 || sleepinessTimer === 0 || boredomTimer === 0) {
-                clearInterval(gameTime(), 1000)
                 alert('Thank you for your service, agent. This Tamagotchi will be a great asset!')
+                clearInterval(gameTime(), 1000)
             }
         gameTimer++
-        if (gameTimer % 3 === 0) {
+        if (gameTimer % 20 === 0) {
             age++
             document.getElementById('gametime').innerText = `Game time: ${gameTimer} Age: ${age}`
             if (age === 2) {
@@ -117,7 +111,7 @@ function hunger() {
 
     const hunTime = setInterval(timer, frequency)
     function timer() {
-        if (sleepinessTimer === 0 || boredomTimer === 0) {
+        if (sleepinessTimer === 0 || boredomTimer === 0 || gameTimer === 60) {
             clearInterval(hunTime)
         } else if (hungerTimer > 0) {
             const pix = document.getElementById(`hun${hungerTimer}`)
@@ -144,7 +138,7 @@ function sleepiness() {
 
     const sleTime = setInterval(timer, frequency)
     function timer() {
-        if (hungerTimer === 0 || boredomTimer === 0) {
+        if (hungerTimer === 0 || boredomTimer === 0 || gameTimer === 60) {
             clearInterval(sleTime)
         } else if (sleepinessTimer > 0) {
             const pix = document.getElementById(`sleep${sleepinessTimer}`)
@@ -171,7 +165,7 @@ function boredom() {
     const borTime = setInterval(timer, frequency)
 
     function timer() {
-        if (hungerTimer === 0 || sleepinessTimer === 0) {
+        if (hungerTimer === 0 || sleepinessTimer === 0 || gameTimer === 60) {
             clearInterval(borTime)
         } else if (boredomTimer > 0) {
             const pix = document.getElementById(`bore${boredomTimer}`)
