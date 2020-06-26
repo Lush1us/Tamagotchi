@@ -45,7 +45,9 @@ document.getElementById('play').addEventListener('click', function () {
 //------GLOBAL VARIABLES
 
 const embryo = [107, 108, 109, 110, 111, 112, 126, 133, 145, 148, 151, 154, 165, 168, 171, 174, 185, 194, 205, 207, 212, 214, 225, 228, 229, 230, 231, 234, 246, 253, 255, 257, 267, 268, 269, 270, 271, 272, 276, 278]
-
+const level2 = [88,89,90,91,92,93,107,114,126,135,146,149,152,155,166,169,172,175,186,195,206,208,213,215,226,229,230,231,232,235,246,255,267,274,287,294,307,310,311,314,326,330,331,335,346,347,348,349,352,353,354,355]
+const level3 = []
+let age = 1;
 
 //------FUNCTIONS
 
@@ -66,9 +68,29 @@ function first() {
     for (let i = 0; i < embryo.length; i++) {
         document.getElementById(`${embryo[i]}`).setAttribute('style', 'background-color: black')
     }
-    setInterval(function gameTime() {
+    setInterval(gameTime, 1000)
+        function gameTime() {
+            if (gameTimer === 60 || hungerTimer === 0 || sleepinessTimer === 0 || boredomTimer === 0) {
+                clearInterval(gameTime(), 1000)
+                alert('Thank you for your service, agent. This Tamagotchi will be a great asset!')
+            }
         gameTimer++
-    }, 1000)
+        if (gameTimer % 20 === 0) {
+            age++
+            document.getElementById('gametime').innerText = `Game time: ${gameTimer} Age: ${age}`
+            if (age === 2) {
+                for (let i = 0; i < embryo.length; i++) {
+                    document.getElementById(`${embryo[i]}`).setAttribute('style', 'background-color: transparent')
+                }
+                for (let i = 0; i < level2.length; i++) {
+                    document.getElementById(`${level2[i]}`).setAttribute('style', 'background-color: black')
+                }
+            }
+        } else {
+          
+            document.getElementById('gametime').innerText = `Game time: ${gameTimer} Age: ${age}`
+        }
+    }
     hunger();
     sleepiness();
     boredom();
@@ -96,7 +118,7 @@ function hunger() {
             hungerTimer--
         } else {
             clearInterval(hunTime)
-            alert('game over')
+            alert("What do you mean it's dead? You might have just doomed us all!")
         }
     }
 }
@@ -114,12 +136,6 @@ function sleepiness() {
     }
 
     const sleTime = setInterval(timer, frequency)
-    // setInterval(freqInc, 10000)
-    // function freqInc() {
-    //     clearInterval();
-    //     frequency -= 100
-    //     setInterval(timer, frequency)
-    // }
     function timer() {
         if (hungerTimer === 0 || boredomTimer === 0) {
             clearInterval(sleTime)
@@ -129,12 +145,11 @@ function sleepiness() {
             sleepinessTimer--
         } else {
             clearInterval(sleTime)
-            alert('game over')
+            alert("What do you mean it's dead? You might have just doomed us all!")
         }
     }
 }
 function boredom() {
-    
     const boredomBar = document.createElement('div')
     boredomBar.setAttribute('class', 'statusBar')
     boredomBar.setAttribute('id', 'Boredom')
@@ -146,14 +161,8 @@ function boredom() {
         boredomBar.appendChild(barPixel)
     }
 
-    
-    // setInterval(freqInc, 10000)
     const borTime = setInterval(timer, frequency)
-    // function freqInc() {
-    //     clearInterval();
-    //     frequency -= 100
-    //     setInterval(timer, frequency)
-    // }
+
     function timer() {
         if (hungerTimer === 0 || sleepinessTimer === 0) {
             clearInterval(borTime)
@@ -163,7 +172,7 @@ function boredom() {
             boredomTimer--
         } else {
             clearInterval(borTime)
-            alert('GAME OVER')
+            alert("What do you mean it's dead? You might have just doomed us all!")
         }    
     }
 }

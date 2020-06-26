@@ -17,7 +17,7 @@ body {
 }
 
 #intro p {
-    max-width: 50vw;
+    max-width: 500px;
 }
 
 #start {
@@ -47,12 +47,19 @@ body {
     /* background-color: dimgray; */
 }
 
+#gametime {
+    width: 160px;
+    height: 40px;  
+    position: relative;
+    right: -300px;
+}
+
 /* STATUS BARS */
 
 #status {
     background-color: transparent;
     position: relative;
-    left: -245px;   
+    left: -200px;   
     display: flex;
     flex-wrap: wrap;
     height: 200px;
@@ -77,6 +84,24 @@ body {
     background-color: transparent;
 }
 
+#hun {
+    position: relative;
+    left: -158px;
+    top: 110px; 
+}
+
+#sle {
+    position: relative;
+    left: -148px;
+    top: 110px;  
+}
+
+#bor {
+    position: relative;
+    left: -137px;
+    top: 110px; 
+}
+
 /* ACTION BUTTONS */
 
 #action {
@@ -96,7 +121,7 @@ body {
 /*  */
 
 .canvas {
-    background-color: white;
+    background-color: transparent;
     width: 420px;
     display: flex;
     position: absolute;
